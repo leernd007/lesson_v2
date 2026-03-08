@@ -64,3 +64,8 @@
 1. Натисніть кнопку **Опублікувати**.
 2. Вкажіть адресу сайту.
 3. Скопіюйте посилання на створений сайт.
+
+Приклад:
+
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/a05ab66d-b26c-4b29-a8af-c0bcdc0cfa40" />
+
