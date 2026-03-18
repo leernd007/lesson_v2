@@ -1,84 +1,94 @@
+# Анкета користувача
+
+Користувач вводить:
+
+- ім’я  
+- вік  
+- улюблений предмет  
+
+Сайт виводить повідомлення:  
+
+> Привіт, [ім’я]! Тобі [вік] років, і ти любиш [предмет].
+
+---
+
+## 💻 HTML + JavaScript код
+
 ```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Форма з валідацією</title>
+    <title>Анкета учня</title>
     <style>
         body {
-            font-family: Arial;
-            max-width: 500px;
-            margin: 40px auto;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
         }
-        input, select, textarea {
+        form {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            max-width: 300px;
+        }
+        input, button {
             width: 100%;
             padding: 8px;
-            margin: 8px 0;
+            margin-top: 5px;
         }
         button {
-            padding: 10px;
+            cursor: pointer;
+        }
+        h3 {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-<h2>Реєстраційна форма</h2>
+    <h2>Анкета учня</h2>
 
-<form>
+    <form id="myForm">
+        <label>Ім’я:</label><br>
+        <input type="text" id="name"><br><br>
 
-    <!-- Текст -->
-    <label>Ім'я:</label>
-    <input type="text" name="name" required minlength="2" maxlength="20">
+        <label>Вік:</label><br>
+        <input type="number" id="age"><br><br>
 
-    <!-- Email -->
-    <label>Email:</label>
-    <input type="email" name="email" required>
+        <label>Улюблений предмет:</label><br>
+        <input type="text" id="subject"><br><br>
 
-    <!-- Пароль -->
-    <label>Пароль:</label>
-    <input type="password" name="password" required minlength="6">
+        <button type="submit">Відправити</button>
+    </form>
 
-    <!-- Число -->
-    <label>Вік:</label>
-    <input type="number" name="age" min="1" max="100" required>
+    <h3 id="result"></h3>
 
-    <!-- Телефон (з pattern) -->
-    <label>Телефон (+380XXXXXXXXX):</label>
-    <input type="tel" name="phone" pattern="\+380[0-9]{9}" required>
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
 
-    <!-- Дата -->
-    <label>Дата народження:</label>
-    <input type="date" name="birthdate" required>
+            let name = document.getElementById("name").value.trim();
+            let age = document.getElementById("age").value.trim();
+            let subject = document.getElementById("subject").value.trim();
 
-    <!-- Вибір зі списку -->
-    <label>Стать:</label>
-    <select name="gender" required>
-        <option value="">Оберіть</option>
-        <option value="male">Чоловік</option>
-        <option value="female">Жінка</option>
-    </select>
+            if (name === "" || age === "" || subject === "") {
+                alert("Заповніть всі поля!");
+                return;
+            }
 
-    <!-- Радіо -->
-    <label>Рівень знань:</label><br>
-    <input type="radio" name="level" value="beginner" required> Початковий<br>
-    <input type="radio" name="level" value="middle"> Середній<br>
-    <input type="radio" name="level" value="advanced"> Просунутий<br>
+            let message = "Привіт, " + name + "! Тобі " + age +
+                          " років, і ти любиш " + subject + ".";
 
-    <!-- Чекбокс -->
-    <label>
-        <input type="checkbox" required>
-        Я погоджуюсь з правилами
-    </label>
+            if (age < 18) {
+                message += " Ти ще школяр!";
+            } else {
+                message += " Ти вже дорослий!";
+            }
 
-    <!-- Текстове поле -->
-    <label>Коментар:</label>
-    <textarea name="comment" minlength="5" maxlength="200"></textarea>
-
-    <!-- Кнопка -->
-    <button type="submit">Відправити</button>
-
-</form>
+            document.getElementById("result").innerText = message;
+        });
+    </script>
 
 </body>
 </html>
-```
