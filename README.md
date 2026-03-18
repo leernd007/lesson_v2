@@ -1,71 +1,84 @@
-# Практична робота  
-## 1. Відкрийте конструктор сайтів
+```html
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма з валідацією</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 500px;
+            margin: 40px auto;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+        }
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
 
-1. Відкрийте браузер.
-2. Перейдіть за адресою: https://sites.google.com
-3. Увійдіть у свій Google акаунт.
+<h2>Реєстраційна форма</h2>
 
----
+<form>
 
-## 2. Створіть новий сайт
+    <!-- Текст -->
+    <label>Ім'я:</label>
+    <input type="text" name="name" required minlength="2" maxlength="20">
 
-1. Натисніть кнопку **Створити сайт (+)**.
-2. Введіть назву сайту.
+    <!-- Email -->
+    <label>Email:</label>
+    <input type="email" name="email" required>
 
-Приклад назви: **Моє хобі** або **Мій клас**
+    <!-- Пароль -->
+    <label>Пароль:</label>
+    <input type="password" name="password" required minlength="6">
 
----
+    <!-- Число -->
+    <label>Вік:</label>
+    <input type="number" name="age" min="1" max="100" required>
 
-## 3. Додайте інформацію на головну сторінку
+    <!-- Телефон (з pattern) -->
+    <label>Телефон (+380XXXXXXXXX):</label>
+    <input type="tel" name="phone" pattern="\+380[0-9]{9}" required>
 
-### Заголовок сторінки **Моє хобі**
+    <!-- Дата -->
+    <label>Дата народження:</label>
+    <input type="date" name="birthdate" required>
 
-### Опис
+    <!-- Вибір зі списку -->
+    <label>Стать:</label>
+    <select name="gender" required>
+        <option value="">Оберіть</option>
+        <option value="male">Чоловік</option>
+        <option value="female">Жінка</option>
+    </select>
 
-Напишіть короткий текст (3–4 речення) про своє хобі.
+    <!-- Радіо -->
+    <label>Рівень знань:</label><br>
+    <input type="radio" name="level" value="beginner" required> Початковий<br>
+    <input type="radio" name="level" value="middle"> Середній<br>
+    <input type="radio" name="level" value="advanced"> Просунутий<br>
 
-**Приклад:**
+    <!-- Чекбокс -->
+    <label>
+        <input type="checkbox" required>
+        Я погоджуюсь з правилами
+    </label>
 
-> Моє хобі — фотографія. Я люблю фотографувати природу та цікаві моменти життя.  
-> Фотографія допомагає мені помічати красу навколо та зберігати спогади.
+    <!-- Текстове поле -->
+    <label>Коментар:</label>
+    <textarea name="comment" minlength="5" maxlength="200"></textarea>
 
----
+    <!-- Кнопка -->
+    <button type="submit">Відправити</button>
 
-### Додайте зображення
+</form>
 
-1. Натисніть **Вставити → Зображення**.
-2. Завантажте або виберіть зображення, яке відповідає темі вашого сайту.
-
----
-
-### Додайте розділ "Мої інтереси"
-
-Приклад:
-
-Мої інтереси
-
-• фотографія
-• спорт
-• музика
-• подорожі
-
----
-
-## 4. Змініть дизайн сайту
-
-1. Відкрийте вкладку **Теми**.
-2. Оберіть будь-яку тему оформлення.
-3. Змініть колір або шрифт.
-
----
-
-## 5. Опублікуйте сайт
-
-1. Натисніть кнопку **Опублікувати**.
-2. Вкажіть адресу сайту.
-3. Скопіюйте посилання на створений сайт.
-
-Приклад:
-
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/a05ab66d-b26c-4b29-a8af-c0bcdc0cfa40" />
-
+</body>
+</html>
+```
