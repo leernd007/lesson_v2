@@ -3,16 +3,16 @@
     - Отримайте посилання на свій сайт.
 
 ## Хід роботи
-1. Зареєструватись на github.com
-2. Створити нову публічну репозиторію (імя має бути `<user>.github.io`)
+1. Зареєструватись на [github.com](https://github.com/)
+2. Створити нову публічну репозиторію [NEW](https://github.com/new) (імя має бути `<user>.github.io`)
    <img width="965" height="797" alt="image" src="https://github.com/user-attachments/assets/0f05cb8f-8de2-4705-a0cf-8835c092087b" />
 
 3. Створити там наступні файли
 <img width="1167" height="195" alt="image" src="https://github.com/user-attachments/assets/2821fad7-dcdf-418e-a31e-9cf6dc93d63c" />
-
-      index.html
-      style.css
-   і папку images/ 
+- index.html
+- style.css
+- 
+   і папку `images/`
    <img width="337" height="42" alt="image" src="https://github.com/user-attachments/assets/bf73771a-e13c-407c-a9f4-c539196badc0" />
 
 
