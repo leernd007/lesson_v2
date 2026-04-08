@@ -83,4 +83,14 @@ footer {
 }
 ```
 6. В папку `images` добав туди logo.png (будь яке лого на ваш вибір з інтернету)
-7. Як створити свою веб сторінку на основі вашої репозиторії описано ось тут https://docs.github.com/en/pages/quickstart
+8. Створюєм веб сторінку
+<img width="1006" height="67" alt="image" src="https://github.com/user-attachments/assets/c65d4370-9bf8-46d6-a16d-cc85e2e2b7d7" />
+<img width="342" height="548" alt="image" src="https://github.com/user-attachments/assets/b073beef-e97f-472b-b05b-42b910a1209d" />
+<img width="971" height="343" alt="image" src="https://github.com/user-attachments/assets/877bd90c-13c0-4eeb-b264-90abb02d51b3" />
+9. Чекаємо 5 хвилин і відкриваємо наш веб сайт
+<img width="906" height="182" alt="image" src="https://github.com/user-attachments/assets/c1f1d1e9-b516-4f4b-b92c-2e1312a04181" />
+
+
+
+
+
