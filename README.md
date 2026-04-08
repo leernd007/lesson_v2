@@ -1,94 +1,85 @@
-# Анкета користувача
+ **Розміщення сайту в інтернеті**
+    - Використайте сервіс [GitHub Pages](https://pages.github.com/)
+    - Отримайте посилання на свій сайт.
 
-Користувач вводить:
+## Хід роботи
+1. Зареєструватись на github.com
+2. Створити нову публічну репозиторію
+   <img width="870" height="743" alt="image" src="https://github.com/user-attachments/assets/92dcbe2f-140b-46e0-b6f8-fd1dfffb2a0c" />
+3. Створити там наступні файли
+<img width="1167" height="195" alt="image" src="https://github.com/user-attachments/assets/2821fad7-dcdf-418e-a31e-9cf6dc93d63c" />
 
-- ім’я  
-- вік  
-- улюблений предмет  
+      index.html
+      style.css
+   і папку images/ 
+   <img width="337" height="42" alt="image" src="https://github.com/user-attachments/assets/bf73771a-e13c-407c-a9f4-c539196badc0" />
 
-Сайт виводить повідомлення:  
 
-> Привіт, [ім’я]! Тобі [вік] років, і ти любиш [предмет].
-
----
-
-## 💻 HTML + JavaScript код
-
+4. `index.html`.
 ```html
 <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Анкета учня</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-        form {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            max-width: 300px;
-        }
-        input, button {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-        }
-        button {
-            cursor: pointer;
-        }
-        h3 {
-            margin-top: 20px;
-        }
-    </style>
+    <title>Мій вебсайт</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <img src="images/logo.png" alt="Логотип" class="logo">
+        <h1>Вітаю на моєму сайті!</h1>
+    </header>
 
-    <h2>Анкета учня</h2>
+    <main>
+        <p>Це мій перший вебсайт з HTML і CSS.</p>
+        <p>Тут можна додавати текст, зображення та інші елементи.</p>
+    </main>
 
-    <form id="myForm">
-        <label>Ім’я:</label><br>
-        <input type="text" id="name"><br><br>
-
-        <label>Вік:</label><br>
-        <input type="number" id="age"><br><br>
-
-        <label>Улюблений предмет:</label><br>
-        <input type="text" id="subject"><br><br>
-
-        <button type="submit">Відправити</button>
-    </form>
-
-    <h3 id="result"></h3>
-
-    <script>
-        document.getElementById("myForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-
-            let name = document.getElementById("name").value.trim();
-            let age = document.getElementById("age").value.trim();
-            let subject = document.getElementById("subject").value.trim();
-
-            if (name === "" || age === "" || subject === "") {
-                alert("Заповніть всі поля!");
-                return;
-            }
-
-            let message = "Привіт, " + name + "! Тобі " + age +
-                          " років, і ти любиш " + subject + ".";
-
-            if (age < 18) {
-                message += " Ти ще школяр!";
-            } else {
-                message += " Ти вже дорослий!";
-            }
-
-            document.getElementById("result").innerText = message;
-        });
-    </script>
-
+    <footer>
+        <p>Автор: Учень 11 класу | 2026</p>
+    </footer>
 </body>
 </html>
+```
+5. `styles.css`.
+```css
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #4682b4;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Логотип */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Основний контент */
+main {
+    padding: 20px;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #4682b4;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+```
+6. В папку `images` добав туди logo.png (будь яке лого на ваш вибір з інтернету)
+7. Як створити свою веб сторінку на основі вашої репозиторії описано ось тут https://docs.github.com/en/pages/quickstart
