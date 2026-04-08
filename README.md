@@ -5,7 +5,8 @@
 ## Хід роботи
 1. Зареєструватись на github.com
 2. Створити нову публічну репозиторію (імя має бути `<user>.github.io`)
-   <img width="870" height="743" alt="image" src="https://github.com/user-attachments/assets/92dcbe2f-140b-46e0-b6f8-fd1dfffb2a0c" />
+   <img width="965" height="797" alt="image" src="https://github.com/user-attachments/assets/0f05cb8f-8de2-4705-a0cf-8835c092087b" />
+
 3. Створити там наступні файли
 <img width="1167" height="195" alt="image" src="https://github.com/user-attachments/assets/2821fad7-dcdf-418e-a31e-9cf6dc93d63c" />
 
