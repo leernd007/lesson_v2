@@ -42,7 +42,7 @@
 </body>
 </html>
 ```
-5. `styles.css`.
+5. `style.css`.
 ```css
 /* Загальні стилі */
 body {
