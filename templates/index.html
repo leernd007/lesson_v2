@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Класний чат</title>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f0f2f5;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #chat {
+            background: white;
+            height: 400px;
+            overflow-y: auto;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 8px;
+            background: #e7f3ff;
+            border-radius: 8px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h2>💬 Класний чат</h2>
+
+<input type="text" id="username" placeholder="Введіть ім'я">
+
+<br>
+
+<input type="text" id="message" placeholder="Напишіть повідомлення">
+<button onclick="sendMessage()">Відправити</button>
+
+<div id="chat"></div>
+
+<script>
+    const socket = io();
+
+    socket.on('message', function(msg) {
+        const chat = document.getElementById('chat');
+
+        const div = document.createElement('div');
+        div.className = 'message';
+        div.innerText = msg;
+
+        chat.appendChild(div);
+
+        chat.scrollTop = chat.scrollHeight;
+    });
+
+    function sendMessage() {
+
+        const username = document.getElementById('username').value;
+        const message = document.getElementById('message').value;
+
+        if(username === '' || message === '') {
+            alert("Введіть ім'я та повідомлення");
+            return;
+        }
+
+        socket.send({
+            username: username,
+            message: message
+        });
+
+        document.getElementById('message').value = '';
+    }
+</script>
+
+</body>
+</html>
